@@ -10,9 +10,11 @@
 		78BEBE611EF12ACE008D459A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BEBE601EF12ACE008D459A /* AppDelegate.swift */; };
 		78BEBE631EF12ACE008D459A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BEBE621EF12ACE008D459A /* ViewController.swift */; };
 		78BEBE661EF12ACE008D459A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BEBE641EF12ACE008D459A /* Main.storyboard */; };
-		78BEBE691EF12ACE008D459A /* SwimPoolCounter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78BEBE671EF12ACE008D459A /* SwimPoolCounter.xcdatamodeld */; };
 		78BEBE6B1EF12ACE008D459A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78BEBE6A1EF12ACE008D459A /* Assets.xcassets */; };
 		78BEBE6E1EF12ACE008D459A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78BEBE6C1EF12ACE008D459A /* LaunchScreen.storyboard */; };
+		78F0A23E1EFBA21C0085E509 /* BTDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0A23B1EFBA21C0085E509 /* BTDeviceCell.swift */; };
+		78F0A23F1EFBA21C0085E509 /* BTSourceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0A23C1EFBA21C0085E509 /* BTSourceList.swift */; };
+		78F0A2401EFBA21C0085E509 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0A23D1EFBA21C0085E509 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		78BEBE601EF12ACE008D459A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78BEBE621EF12ACE008D459A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78BEBE651EF12ACE008D459A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		78BEBE681EF12ACE008D459A /* SwimPoolCounter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwimPoolCounter.xcdatamodel; sourceTree = "<group>"; };
 		78BEBE6A1EF12ACE008D459A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78BEBE6D1EF12ACE008D459A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78BEBE6F1EF12ACE008D459A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78F0A23B1EFBA21C0085E509 /* BTDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTDeviceCell.swift; sourceTree = "<group>"; };
+		78F0A23C1EFBA21C0085E509 /* BTSourceList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTSourceList.swift; sourceTree = "<group>"; };
+		78F0A23D1EFBA21C0085E509 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		78BEBE5F1EF12ACE008D459A /* SwimPoolCounter */ = {
 			isa = PBXGroup;
 			children = (
+				78F0A24C1EFBADDF0085E509 /* CoreData */,
+				78F0A23A1EFBA20E0085E509 /* Settings */,
 				78BEBE601EF12ACE008D459A /* AppDelegate.swift */,
 				78BEBE621EF12ACE008D459A /* ViewController.swift */,
 				78BEBE641EF12ACE008D459A /* Main.storyboard */,
 				78BEBE6A1EF12ACE008D459A /* Assets.xcassets */,
 				78BEBE6C1EF12ACE008D459A /* LaunchScreen.storyboard */,
 				78BEBE6F1EF12ACE008D459A /* Info.plist */,
-				78BEBE671EF12ACE008D459A /* SwimPoolCounter.xcdatamodeld */,
 			);
 			path = SwimPoolCounter;
+			sourceTree = "<group>";
+		};
+		78F0A23A1EFBA20E0085E509 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				78F0A23B1EFBA21C0085E509 /* BTDeviceCell.swift */,
+				78F0A23C1EFBA21C0085E509 /* BTSourceList.swift */,
+				78F0A23D1EFBA21C0085E509 /* SettingsViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		78F0A24C1EFBADDF0085E509 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +164,9 @@
 			files = (
 				78BEBE631EF12ACE008D459A /* ViewController.swift in Sources */,
 				78BEBE611EF12ACE008D459A /* AppDelegate.swift in Sources */,
-				78BEBE691EF12ACE008D459A /* SwimPoolCounter.xcdatamodeld in Sources */,
+				78F0A23E1EFBA21C0085E509 /* BTDeviceCell.swift in Sources */,
+				78F0A23F1EFBA21C0085E509 /* BTSourceList.swift in Sources */,
+				78F0A2401EFBA21C0085E509 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,21 +332,9 @@
 				78BEBE741EF12ACE008D459A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		78BEBE671EF12ACE008D459A /* SwimPoolCounter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				78BEBE681EF12ACE008D459A /* SwimPoolCounter.xcdatamodel */,
-			);
-			currentVersion = 78BEBE681EF12ACE008D459A /* SwimPoolCounter.xcdatamodel */;
-			path = SwimPoolCounter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 78BEBE551EF12ACE008D459A /* Project object */;
 }

@@ -20,6 +20,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+ 
+    @IBAction func ShowSettings(_ sender: Any) {
+    
+        performSegue(withIdentifier: "ShowSettingsSeque", sender: self)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowSettingsSeque" {
+            
+        }
+        
+    }
 }
 

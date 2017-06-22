@@ -1,14 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ix2-oi-lgS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="DxQ-Nu-6cs">
+            <objects>
+                <navigationController id="ix2-oi-lgS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ob8-we-mE4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ArU-MD-4Ah"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KdM-gl-FRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1412" y="101"/>
+        </scene>
+        <!--Counter of Circles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwimPoolCounter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +37,131 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nfP-VW-P79">
+                                <rect key="frame" x="0.0" y="72" width="375" height="595"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H5m-Yl-glN">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="515"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seh-zU-LFc" userLabel="DeviceNameView">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labelghgnhjh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2j7-nD-iTb">
+                                                        <rect key="frame" x="123.5" y="12.5" width="128.5" height="25.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="2j7-nD-iTb" firstAttribute="centerY" secondItem="seh-zU-LFc" secondAttribute="centerY" id="Gwv-1h-715"/>
+                                                    <constraint firstAttribute="height" constant="50" id="qF6-LP-Yld"/>
+                                                    <constraint firstItem="2j7-nD-iTb" firstAttribute="centerX" secondItem="seh-zU-LFc" secondAttribute="centerX" id="wip-q6-sRP"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVg-X9-Ta9" userLabel="FlowDataView">
+                                                <rect key="frame" x="0.0" y="50" width="375" height="415"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5h-u8-Pth" userLabel="StaticticView">
+                                                <rect key="frame" x="0.0" y="465" width="375" height="50"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="NDi-rK-4Dy"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" restorationIdentifier="ButtonView" translatesAutoresizingMaskIntoConstraints="NO" id="ZNl-fw-gxJ">
+                                        <rect key="frame" x="0.0" y="515" width="375" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Rh-ew-4xU">
+                                                <rect key="frame" x="127" y="19" width="120" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="9hz-WL-8A5"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="95Y-U9-Y4W"/>
+                                            <constraint firstItem="9Rh-ew-4xU" firstAttribute="centerY" secondItem="ZNl-fw-gxJ" secondAttribute="centerY" id="L1l-aQ-BhT"/>
+                                            <constraint firstItem="9Rh-ew-4xU" firstAttribute="centerX" secondItem="ZNl-fw-gxJ" secondAttribute="centerX" id="So3-6g-N5D"/>
+                                            <constraint firstItem="9Rh-ew-4xU" firstAttribute="top" secondItem="ZNl-fw-gxJ" secondAttribute="top" constant="19" id="ZJU-Vp-3jQ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="nfP-VW-P79" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="E2O-od-MXn"/>
+                            <constraint firstAttribute="trailing" secondItem="nfP-VW-P79" secondAttribute="trailing" id="V2X-mD-B7b"/>
+                            <constraint firstItem="nfP-VW-P79" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="djU-th-fqA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nfP-VW-P79" secondAttribute="bottom" id="gAy-7s-cve"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Counter of Circles" id="huz-m8-dLM">
+                        <barButtonItem key="rightBarButtonItem" title="Settins" id="euL-fc-ASh">
+                            <connections>
+                                <segue destination="see-IT-EMy" kind="show" identifier="chooseBTDeviceSegue" id="IkO-kc-jGh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-662" y="100"/>
+        </scene>
+        <!--Source List-->
+        <scene sceneID="UYN-6m-rHP">
+            <objects>
+                <tableViewController id="see-IT-EMy" customClass="BTSourceList" customModule="SwimPoolCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="DT7-I9-Dor">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="btDeviceCell" id="2ZW-5N-MpD" customClass="BTDeviceCell" customModule="SwimPoolCounter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2ZW-5N-MpD" id="Xru-ma-8fy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BlueToothDeviceName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2or-t3-bL5">
+                                            <rect key="frame" x="24" y="0.0" width="326" height="44"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2or-t3-bL5" firstAttribute="centerY" secondItem="Xru-ma-8fy" secondAttribute="centerY" id="OQx-3v-svq"/>
+                                        <constraint firstItem="2or-t3-bL5" firstAttribute="leading" secondItem="Xru-ma-8fy" secondAttribute="leadingMargin" constant="16" id="Rrd-t6-Ly7"/>
+                                        <constraint firstItem="2or-t3-bL5" firstAttribute="centerX" secondItem="Xru-ma-8fy" secondAttribute="centerX" id="cyC-hj-Ogc"/>
+                                        <constraint firstItem="2or-t3-bL5" firstAttribute="top" secondItem="Xru-ma-8fy" secondAttribute="top" id="koh-kA-vm4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="deviceNameLabel" destination="2or-t3-bL5" id="YqE-HS-UJk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="see-IT-EMy" id="sv6-pf-k8F"/>
+                            <outlet property="delegate" destination="see-IT-EMy" id="rwV-74-4pY"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ieq-xA-Sw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285.60000000000002" y="99.400299850074973"/>
         </scene>
     </scenes>
 </document>
